@@ -3,30 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LAYOUT </title>
+    <title>TABLE</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 2px solid black;
+      }
+    </style>
   </head>
   <body>
-    <div id="parent">
-      <div id="top_bar">
-        <div id="logo"></div>
-        <div id="time"></div>
-      </div>
-      <div id="mid">
-        <div id="mid_left">
-        </div>
-        <div id="mid_right">
-          <div id=" mid_right_top">
-            <div id="langauage"></div>
-            <div id="theme"></div>
-            <div id="something"></div>
-          </div>
-          <div id="mid_right_bottom">
-          </div>
-        </div>
-      </div>
-      <div id="bottom">
-        <div id="result">result description</div>
-      </div>
-    </div>
+    <table>
+      <tr>
+        <th>S.NO</th>
+        <th>NAME</th>
+        <th>ROOL NUMBER</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td rowspan="2">ANU</td>
+        <td>22</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td colspan="2">PARVATHI</td>
+        <td>21</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>ANUSHA</td>
+        <td>20</td>
+      </tr>
+    </table>
   </body>
 </html>
