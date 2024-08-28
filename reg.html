@@ -3,203 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>  Registration Form</title>
+    <title>Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            background-color: #f0f0f0;
-            font-family: Verdana, sans-serif;
-            color: #003366;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            text-align: center;
-            color: #ff6600;
-            text-decoration: underline;
-            margin-top: 20px;
-        }
-        table {
-            background-color: white;
-            border: 1px solid #ddd;
+        body { 
+            background-color: #f5f5f5;
             padding: 20px;
-            margin: 20px auto;
-            width: 80%;
-            max-width: 1080px;
+        }
+        .form-container {
+            background-color: white;
+            padding: 30px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 600px;
+            margin: auto;
         }
-        td {
-            padding: 10px;
-            color: #003366;
-        }
-        input[type="text"], textarea, select {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            box-sizing: border-box;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        input[type="submit"], input[type="reset"] {
-            width: 45%;
-            padding: 10px;
-            margin: 10px;
-            background-color: #003366;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        input[type="submit"]:hover, input[type="reset"]:hover {
-            background-color: #002244;
-        }
-        .form-header {
-            background-color: #003366;
-            color: white;
-            padding: 10px;
+        .form-container h2 {
             text-align: center;
-            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        .profile-pic {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
             margin-bottom: 20px;
         }
-        .form-footer {
-            text-align: center;
-            font-size: 12px;
-            color: #666;
-            margin-top: 20px;
+        .profile-pic img {
+            max-width: 150px;
+            max-height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <table cellspacing="5" cellpadding="5">
-        <tr>
-            <td colspan="4" class="form-header d-flex">Personal Information</td>
-        </tr>
-        <tr>
-            <td>First Name</td>
-            <td><input type="text" name="firstName" required></td>
-        </tr>
-        <tr>
-            <td>Last Name</td>
-            <td><input type="text" name="lastName" required></td>
-        </tr>
-        <tr>
-            <td>Date of Birth</td>
-            <td colspan="2">
-                <select name="day" required>
-                    <option value="">Day:</option>
-                    <!-- Add day options here -->
+
+<div class="form-container">
+    <h2>PROFILE DETAILS</h2>
+    <form>
+        <!-- Profile Picture Section -->
+        <div class="profile-pic">
+            <img src="profileimg.png" alt="Profile Picture">
+            <input type="file" class="form-control-file mt-2" id="profilePic" accept="image/*">
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" class="form-control" id="dob">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="contact">Contact Number:</label>
+                <input type="tel" class="form-control" id="contact" placeholder="Enter your contact number">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="occupation">Occupation:</label>
+                <input type="text" class="form-control" id="occupation" placeholder="Enter your occupation">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" id="age" placeholder="Enter your age">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="gender">Gender:</label>
+                <select id="gender" class="form-select">
+                    <option selected>Choose...</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
                 </select>
-                <select name="month" required>
-                    <option value="">Month:</option>
-                    <!-- Add month options here -->
-                </select>
-                <select name="year" required>
-                    <option value="">Year:</option>
-                    <!-- Add year options here -->
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>Email ID</td>
-            <td><input type="email" name="email" required></td>
-        </tr>
-        <tr>
-            <td>Mobile Number</td>
-            <td><input type="text" name="mobile" required></td>
-            <td>(10 digit number)</td>
-        </tr>
-        <tr>
-            <td>Gender</td>
-            <td>
-                Female <input type="radio" name="gender" value="female" required>
-                Male <input type="radio" name="gender" value="male" required>
-            </td>
-        </tr>
-        <tr>
-            <td>Address</td>
-            <td><textarea rows="4" name="address" required></textarea></td>
-        </tr>
-        <tr>
-            <td>City</td>
-            <td><input type="text" name="city" required></td>
-        </tr>
-        <tr>
-            <td>Pin Code</td>
-            <td><input type="text" name="pincode" required></td>
-        </tr>
-        <tr>
-            <td>State</td>
-            <td><input type="text" name="state" required></td>
-        </tr>
-        <tr>
-            <td>Country</td>
-            <td><input type="text" name="country" required></td>
-        </tr>
-        <tr>
-            <td colspan="4" class="form-header">Additional Information</td>
-        </tr>
-        <tr>
-            <td>Hobbies</td>
-            <td colspan="2">
-                Coding <input type="checkbox" name="hobbies" value="coding">
-                Reading <input type="checkbox" name="hobbies" value="reading">
-                Blogging <input type="checkbox" name="hobbies" value="blogging">
-                Traveling <input type="checkbox" name="hobbies" value="traveling">
-                Other <input type="checkbox" name="hobbies" value="other"><input type="text" name="otherHobby">
-            </td>
-        </tr>
-        <tr>
-            <td colspan="4" class="form-header">Academic Qualifications</td>
-        </tr>
-        <tr >
-            <td colspan="2">
-                <table>
-                    <tr>
-                        <td>SI.NO</td>
-                        <td>Examination</td>
-                        <td>Board</td>
-                        <td>Percentage</td>
-                        <td>Year of Passing</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Class X</td>
-                        <td><input type="text" name="class10Board" required></td>
-                        <td><input type="text" name="class10Percentage" required></td>
-                        <td><input type="text" name="class10Year" required></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Class XII</td>
-                        <td><input type="text" name="class12Board" required></td>
-                        <td><input type="text" name="class12Percentage" required></td>
-                        <td><input type="text" name="class12Year" required></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Graduation</td>
-                        <td><input type="text" name="graduationBoard" required></td>
-                        <td><input type="text" name="graduationPercentage" required></td>
-                        <td><input type="text" name="graduationYear" required></td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>Course Applied For</td>
-            <td>
-                B.Tech <input type="radio" name="course" value="btech" required>
-                B.Com <input type="radio" name="course" value="bcom" required>
-                B.Sc <input type="radio" name="course" value="bsc" required>
-                B.A <input type="radio" name="course" value="ba" required>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="5" align="center">
-                <input type="submit" value="Submit">
-                <input type="reset" value="Reset">
-            </td>
-        </tr>
-    </table>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="emergencycontact">Person to Contact in Case of Emergency:</label>
+                <input type="text" class="form-control" id="emergencycontact" placeholder="Enter emergency contact name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <label for="emergencycontactnumber">Emergency Contact Number:</label>
+                <input type="tel" class="form-control" id="emergencycontactnumber" placeholder="Enter emergency contact number">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+    </form>
+</div>
+
 </body>
 </html>
