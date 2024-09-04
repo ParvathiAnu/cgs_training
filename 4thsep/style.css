@@ -1,0 +1,56 @@
+
+        body {
+            background: linear-gradient(to right, #e0eafc, #cfdef3);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .card-custom {
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-custom:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .card-title {
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+        h5 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .card-img-top {
+            height: 150px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+        .card-text {
+            font-size: 1rem;
+            color: #555;
+            padding: 10px 0;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+        }
+        .btn-outline-primary {
+            border-radius: 50px;
+            font-weight: 600;
+            background: linear-gradient(to right, #007bff, #00d4ff);
+            color: white;
+            border: none;
+            padding: 10px;
+        }
+        
+        .final-button-container {
+            margin-top: 40px;
+        }
+        .btn-success {
+            font-weight: 600;
+            padding: 15px 30px;
+            border-radius: 50px;
+            background: linear-gradient(to right, #28a745, #85eb85);
+            border: none;
+        }
+        .btn-success:hover {
+            background: linear-gradient(to right, #218838, #5bbf5b);
+        }
