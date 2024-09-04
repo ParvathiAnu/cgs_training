@@ -1,93 +1,93 @@
 body {
-            background: linear-gradient(to right, #e0eafc, #cfdef3);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-        .card-custom {
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
+.card-custom {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
-        .card-custom:hover {
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
+.card-custom:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 
-        .card-title {
-            font-weight: 600;
-            font-size: 1.25rem;
-        }
+.card-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
 
-        .card-img-top {
-            height: 120px; 
-            width: 120px;
-            object-fit: contain;
-            margin-top: 20px;
-        }
+.card-img-top {
+    height: 120px; 
+    width: 120px;
+    object-fit: contain;
+    margin-top: 20px;
+}
 
-        .card-body {
-            padding: 20px;
-        }
+.card-body {
+    padding: 20px;
+}
 
-        .card-text {
-            font-size: 1.5rem;
-            color: #555;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            padding: 10px 0;
-        }
+.card-text {
+    font-size: 1.5rem;
+    color: #555;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 10px 0;
+}
 
-        .btn-outline-primary {
-            border-radius: 25px;
-            font-weight: 600;
-            background: linear-gradient(to right, #007bff, #00d4ff);
-            color: white;
-            border: none;
-            padding: 10px;
-        }
+.btn-outline-primary {
+    border-radius: 25px;
+    font-weight: 600;
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    color: white;
+    border: none;
+    padding: 10px;
+}
 
-        .btn-outline-primary:hover {
-            background: linear-gradient(to right, #0056b3, #0096d6);
-        }
+.btn-outline-primary:hover {
+    background: linear-gradient(to right, #0056b3, #0096d6);
+}
 
-        .final-button-container {
-            margin-top: 40px;
-        }
+.final-button-container {
+    margin-top: 40px;
+}
 
-        .btn-success {
-            font-weight: 600;
-            padding: 15px 30px;
-            border-radius: 25px;
-            background: linear-gradient(to right, #28a745, #85eb85);
-            border: none;
-        }
+.btn-success {
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 25px;
+    background: linear-gradient(to right, #28a745, #85eb85);
+    border: none;
+}
 
-        .btn-success:hover {
-            background: linear-gradient(to right, #218838, #5bbf5b);
-        }
+.btn-success:hover {
+    background: linear-gradient(to right, #218838, #5bbf5b);
+}
 
-        textarea {
-            border: none;
-            border-radius: 10px;
-            padding: 10px;
-            font-size: 1rem;
-            width: 100%;
-            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
-        }
+textarea {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
 
-        .container {
-            padding-top: 40px;
-        }
+.container {
+    padding-top: 40px;
+}
 
-        .row {
-            justify-content: center;
-        }
+.row {
+    justify-content: center;
+}
 
-        .col-md-6 {
-            max-width: 250px;
-        }
+.col-md-6 {
+    max-width: 250px;
+}
