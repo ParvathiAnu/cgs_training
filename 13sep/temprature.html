@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f0f8ff; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .converter-container {
+            background-color: #ffffff; 
+            border: 1px solid #e3e3e3;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 400px;
+        }
+
+        .converter-header {
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-label {
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .custom-button {
+            width: 100%;
+            background-color: #4caf50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .custom-button:hover {
+            background-color: #45a049;
+        }
+
+        .output-result {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #0056b3;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #e3e3e3;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .form-select, .form-control {
+            margin-bottom: 15px;
+        }
+
+        .side-by-side {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .side-by-side .form-group {
+            flex: 0 0 48%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="converter-container">
+        <h2 class="converter-header">Temperature Converter</h2>
+        <div class="mb-3">
+            <label for="inputTemp" class="form-label">Temperature</label>
+            <input type="number" class="form-control" id="inputTemp" placeholder="Enter degrees">
+        </div>
+        <div class="side-by-side">
+            <div class="form-group">
+                <label for="fromUnit" class="form-label">From</label>
+                <select id="fromUnit" class="form-select">
+                    <option value="C">Celsius (°C)</option>
+                    <option value="F">Fahrenheit (°F)</option>
+                    <option value="K">Kelvin (K)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="toUnit" class="form-label">To</label>
+                <select id="toUnit" class="form-select">
+                    <option value="C">Celsius (°C)</option>
+                    <option value="F">Fahrenheit (°F)</option>
+                    <option value="K">Kelvin (K)</option>
+                </select>
+            </div>
+        </div>
+        <button class="custom-button" onclick="convertTemp()">Convert</button>
+
+        <div id="output" class="output-result">Converted Temperature: --</div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function convertTemp() {
+            const inputTemp = parseFloat(document.getElementById('inputTemp').value);
+            const fromUnit = document.getElementById('fromUnit').value;
+            const toUnit = document.getElementById('toUnit').value;
+
+            let result;
+
+            if (isNaN(inputTemp)) {
+                document.getElementById('output').innerText = 'Please enter a valid number';
+                return;
+            }
+
+            if (fromUnit === toUnit) {
+                result = inputTemp; // If same units
+            } else {
+                let tempInCelsius;
+                switch (fromUnit) {
+                    case 'C':
+                        tempInCelsius = inputTemp;
+                        break;
+                    case 'F':
+                        tempInCelsius = (inputTemp - 32) * 5 / 9;
+                        break;
+                    case 'K':
+                        tempInCelsius = inputTemp - 273.15;
+                        break;
+                }
+                switch (toUnit) {
+                    case 'C':
+                        result = tempInCelsius;
+                        break;
+                    case 'F':
+                        result = (tempInCelsius * 9 / 5) + 32;
+                        break;
+                    case 'K':
+                        result = tempInCelsius + 273.15;
+                        break;
+                }
+            }
+
+            document.getElementById('output').innerText = `Converted Temperature: ${result.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
