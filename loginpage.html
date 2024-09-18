@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Spotify Search</title>
+    <style>
+        .album-img {
+            width: 100%;
+            height: auto;
+        }
+        .currently-playing {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: .25rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .currently-playing img {
+            width: 100px;
+            height: auto;
+            margin-right: 1rem;
+        }
+        .play-btn, .play-song-btn {
+            font-size: 1.5rem;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+            border-radius: .25rem;
+        }
+        .play-song-btn {
+            font-size: 1rem;
+            background-color: #d4edda; /* Light green background */
+            border: 1px solid #c3e6cb; /* Slightly darker green border */
+            color: #155724; /* Dark green text */
+            padding: 0.25rem 0.5rem;
+            /* Small button size */
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Header -->
+        <div class="row bg-dark text-white p-3">
+            <div class="col">
+                <h1>Spotify Search</h1>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="row mt-3">
+            <!-- Sidebar -->
+            <div class="col-2 bg-light p-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Library</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Playlists</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Profile</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="col-10">
+                <!-- Currently Playing Section -->
+                <div class="currently-playing d-none" id="currently-playing">
+                    <img id="playing-img" src="" alt="Currently Playing">
+                    <div class="details">
+                        <h5 id="playing-title">Title</h5>
+                        <p id="playing-artist">Artist</p>
+                    </div>
+                    <div>
+                        <button id="play-pause-btn" class="play-btn">&#9658;</button> <!-- Custom Play button -->
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <input type="text" id="search" class="form-control" placeholder="Search for songs...">
+                </div>
+                <div id="results" class="row row-cols-1 row-cols-md-4 g-4">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+</body>
+</html>
