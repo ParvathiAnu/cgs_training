@@ -1,0 +1,68 @@
+body {
+    font-size: 0.9rem; 
+}
+.icon-blue {
+    color: blue;
+}
+.icon-medium {
+    font-size: 2rem; 
+}
+.icon-small {
+    font-size: 1rem; 
+}
+.list-group-item {
+    margin: 0;
+    padding: 0.5rem 0; 
+}
+.list-group-item a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    flex-direction: column; 
+}
+.list-group-item a:hover {
+    color: blue;
+}
+.footer-socials a {
+    color: blue;
+    margin: 0 8px;
+    font-size: 1.5rem;
+}
+.footer-socials a:hover {
+    color: darkblue;
+}
+.sidebar {
+    position: sticky;
+    top: 0;
+    width: 8.33%; 
+    min-height: 100vh;
+}
+.sidebar .list-group-item {
+    text-align: center;
+}
+.sidebar .list-group-item i {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem; 
+}
+.main-content {
+    width: 91.67%; 
+}
+.header-right input {
+    width: 65%;
+}
+.search-bar {
+    width: 100%; 
+}
+.btn {
+    font-size: 0.875rem; 
+}
+.btn-link {
+    border: none;
+    font-size: 0.875rem; 
+}
+.btn-link:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSR Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/landing.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Header Section -->
+        <header class="d-flex flex-wrap p-2 border-bottom">
+            <div class="col-12 col-md-1 d-flex align-items-center mb-2 mb-md-0">
+                <img src="assets/images/logo.png" class="img-fluid" style="max-width: 70px; border-radius: 80%;" alt="logo">
+            </div>
+            <div class="col-12 col-md-6 d-flex justify-content-center mb-2 mb-md-0">
+                <div class="d-flex gap-2">
+                    <!-- Dropdown 1: Overview -->
+                    <div class="dropdown mt-4">
+                        <button class="btn btn-light btn-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Overview
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-newspaper icon-blue"></i> Recent Updates</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-tasks icon-blue"></i> Status Updates</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-users icon-blue"></i> Members</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-blog icon-blue"></i> Blog</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-calendar-alt icon-blue"></i> Events</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Dropdown 2: Community Engagement -->
+                    <div class="dropdown mt-4">
+                        <button class="btn btn-light btn-sm" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                            Community Engagement
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-hands-helping icon-blue"></i> Volunteer Opportunities</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-handshake icon-blue"></i> Partnerships</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-smile icon-blue"></i> Impact Stories</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-comments icon-blue"></i> Community Forums</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Dropdown 3: Support & Tools -->
+                    <div class="dropdown mt-4">
+                        <button class="btn btn-light btn-sm" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
+                            Support & Tools
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-project-diagram icon-blue"></i> Project Management</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-question-circle icon-blue"></i> FAQs</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-poll icon-blue"></i> Surveys & Feedback</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-headset icon-blue"></i> Help Desk</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Dropdown 4: Reports Year-Wise -->
+                    <div class="dropdown mt-4">
+                        <button class="btn btn-light btn-sm" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false">
+                            Reports Year-Wise
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-file-alt icon-blue"></i> 2021 Report</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-file-alt icon-blue"></i> 2022 Report</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-file-alt icon-blue"></i> 2023 Report</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 header-right d-flex align-items-center mb-md-0">
+                <input type="text" placeholder="Search" class="form-control search-bar me-1">
+                <div class="user-options d-flex align-items-center">
+                    <a href="sign-in.html" class="btn btn-sm btn-primary me-1 btn-light">Sign In</a>
+                    <a href="sign-up.html" class="btn btn-sm btn-primary me-1 btn-light">Sign Up</a>
+                    <a href="profile.html"><i class="fas fa-user-circle icon-blue icon-medium"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sidebar and Main Content -->
+        <div class="d-flex flex-wrap">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="dashboard.html"><i class="fas fa-home icon-blue icon-small"></i><br>Home</a></li>
+                    <li class="list-group-item"><a href="communites.html"><i class="fas fa-users icon-blue icon-small"></i><br>Communities</a></li>
+                    <li class="list-group-item"><a href="people.html"><i class="fas fa-user-friends icon-blue icon-small"></i><br>People</a></li>
+                    <li class="list-group-item">
+                        <form id="fileUploadForm" enctype="multipart/form-data">
+                            <label for="fileUpload" class="d-block">
+                                <i class="fas fa-file-upload icon-blue icon-small"></i><br> File
+                            </label>
+                            <input type="file" id="fileUpload" name="fileUpload" class="d-none" onchange="displayFile()">
+                            <ul id="fileList" class="mt-2"></ul>
+                        </form>
+                    </li>
+                    
+                    <li class="list-group-item"><a href="#"><i class="fas fa-cog icon-blue icon-small"></i><br>Settings</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-ellipsis-h icon-blue icon-small"></i><br>More</a></li>
+                </ul>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="main-content" d-block>
+                <div class="d-flex justify-content-between btn-light mt-1">
+                    <div class="p-1">
+                        <img src="assets/images/graphs.png" alt="">
+                    </div>
+                    <div>
+                        <img src="assets/images/graphs.png" alt=" ">
+                    </div>
+                    <div>
+                        <img src="assets/images/graphs.png" alt="">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img src="assets/images/main.avif" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="bg-light text-center text-lg-start mt-5">
+            <div class="container p-4">
+                <div class="row">
+                    <!-- Logo and Text Area -->
+                    <div class="col-lg-3 col-md-12 mb-4 mb-md-0">
+                        <img src="assets/images/logo.png" alt="logo" class="img-fluid mb-3" style="max-width: 100px;">
+                        <p>
+                            CSR Project aims to make a positive impact in various communities through dedicated efforts and collaboration.
+                        </p>
+                    </div>
+                    
+                    <!-- Columns of List Items -->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5>Overview</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-dark">Recent Updates</a></li>
+                            <li><a href="#" class="text-dark">Status Updates</a></li>
+                            <li><a href="#" class="text-dark">Members</a></li>
+                            <li><a href="#" class="text-dark">Blog</a></li>
+                            <li><a href="#" class="text-dark">Events</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5>Community Engagement</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-dark">Volunteer Opportunities</a></li>
+                            <li><a href="#" class="text-dark">Partnerships</a></li>
+                            <li><a href="#" class="text-dark">Impact Stories</a></li>
+                            <li><a href="#" class="text-dark">Community Forums</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5>Support & Tools</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-dark">Project Management</a></li>
+                            <li><a href="#" class="text-dark">FAQs</a></li>
+                            <li><a href="#" class="text-dark">Surveys & Feedback</a></li>
+                            <li><a href="#" class="text-dark">Help Desk</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Social Media Icons and Links -->
+             <div class="bg-dark text-white  d-flex flex-row ">
+                <!-- Social Media Icons -->
+                <div class="footer-socials mb-3 mb-md-0 p-3">
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+
+                <!-- Links -->
+                <div class="d-flex flex-wrap justify-content-center p-4">
+                    <a href="terms-link" class="text-decoration-none text-white me-3 mb-2 mb-md-0">Terms</a>
+                    <a href="privacy-link" class="text-decoration-none text-white me-3 mb-2 mb-md-0">Privacy</a>
+                    <a href="docs-link" class="text-decoration-none text-white me-3 mb-2 mb-md-0">Docs</a>
+                    <a href="contact-link" class="text-decoration-none text-white me-3 mb-2 mb-md-0">Contact Support</a>
+                    <a href="manage-cookies-link" class="text-decoration-none text-white me-3 mb-2 mb-md-0">Manage cookies</a>
+                    <a href="do-not-share-link" class="text-decoration-none text-white me-3 mb-2 mb-md-0">Do not share my personal information</a>
+                    <p class="mb-0">1234 Street Name, City, Country</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

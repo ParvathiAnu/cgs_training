@@ -1,0 +1,86 @@
+
+        *{
+            font-family:'Courier New', Courier, monospace;
+    }
+    #topbar{
+        display: flex;
+        justify-content: space-between;
+        background-color:#444444;
+        color: white;
+         height: 100px;      
+         margin:0%;
+
+    }
+    
+    #photo{
+        width: 50px;
+        border-radius: 50%;
+        padding-top: 2%;
+        padding-right: 10px;
+        
+    }
+    #h6{
+        padding-top :1%;
+        padding-left:2%;
+        align-content: center;
+    
+    }
+    #name{
+        padding-top :1%;
+        padding-left:1%;
+        align-content: center;
+    }
+    #profile{
+        padding-right: 1%;
+    }
+    .row{
+       padding-top: 2px;
+       display: flex;
+       width: 100%;
+       height: 200px;
+
+    }
+    .courses{
+
+       width: 25%;
+       padding-left:2%;
+        background-color:#b1b1b1;
+        border:1px,solid,beige;
+       
+       
+    }
+    #cid{
+        width: 260px;
+        height:100px;
+        padding-right:25%;
+        padding-top: 5%;
+        padding-right:75%;
+    }
+
+    #details{
+        margin:0%;
+    }
+    #course_name{
+        margin:0%;
+    }
+    #h6{
+        margin:0%;
+    }
+    #bottombar{
+        display: flex;
+        justify-content: space-between;
+        background-color:#444444;
+        color: white;
+         height: 60px;      
+         margin-top: 5px;
+    }
+#contact{
+    padding-right: 5px;
+    padding-left: 5px;
+}
+#udemy{
+    padding-left: 5px;
+}
+#small{
+    display:flex;
+}
